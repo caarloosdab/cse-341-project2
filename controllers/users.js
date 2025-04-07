@@ -36,6 +36,7 @@ const createUser = async (req, res) => {
             password: req.body.password,
             email: req.body.email,
             name: req.body.name,
+            age: req.body.age,
             country: req.body.country
         };
         const response = await mongodb.getDataBase().db().collection('users').insertOne(user);
@@ -58,6 +59,7 @@ const updateUser = async (req, res) => {
             password: req.body.password,
             email: req.body.email,
             name: req.body.name,
+            age: req.body.age,
             country: req.body.country
         };
         const response = await mongodb.getDataBase().db().collection('users').replaceOne({ _id: userId }, user);
