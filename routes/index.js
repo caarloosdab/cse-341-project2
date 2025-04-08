@@ -21,5 +21,7 @@ router.get('/logout', function(req, res, next) {
 });  
 
 router.use('/users', require('./users'));
+router.use('/entries', require('./entries'));
+
 
 module.exports = router;
